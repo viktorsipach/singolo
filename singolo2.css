@@ -558,6 +558,10 @@
     height: 187px;
 }
 
+.portfolio__img:nth-child(n+13) {
+  display: none;
+}
+
 .portfolio__bottom {
     width: 1020px;
     height: 6px;
