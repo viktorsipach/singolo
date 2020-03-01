@@ -21,6 +21,7 @@
     font-family: "Lato",sans-serif;;
     font-weight: 700;
     margin-left: 40px;
+    padding-bottom: 1px;
 }
 
 .logo span {
@@ -29,7 +30,7 @@
 
 .navigation {
     display: flex;
-    margin-top: 10px;
+    margin-top: 7px;
     margin-right: 40px; 
     font-size: 8.65655pt;
     line-height: 6px;
@@ -67,7 +68,7 @@
 
 .header__bottom {
     width: 1020px;
-    height: 6px;
+    height: 4px;
     background-color: #323746;
    
 }
@@ -125,10 +126,7 @@
 }
 
 .btn-left:hover {
-    cursor: pointer;
-}
-
-.btn-right:hover {
+    opacity: 0.7;
     cursor: pointer;
 }
 
@@ -136,6 +134,11 @@
     position: absolute;
     top: 281px;
     right: 40px;
+}
+
+.btn-right:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .service {
@@ -146,7 +149,7 @@
 
 .service__bottom {
     width: 1020px;
-    height: 6px;
+    height: 4px;
     background-color: #ffffff;
 }
 .service__container {
@@ -483,7 +486,7 @@
 }
 
 .portfolio__wrapper {
-    width: 938px;
+    width: 940px;
     height: 864px;
     margin: 0 auto;
 }
@@ -577,7 +580,7 @@
 }
 
 .about-us__wrapper {
-    width: 938px;
+    width: 940px;
     height: 728px;
     margin: 0 auto;
 }
@@ -676,7 +679,7 @@
 }
 
 .quote__wrapper {
-    width: 938px;
+    width: 940px;
     height: 648px;
     margin: 0 auto;
 }
@@ -733,7 +736,7 @@
     color: #f48c8f;
     font-family: "Lato";
     font-weight: 400;
-    padding-left: 13px;
+    padding-left: 15px;
     padding-top: 6px; 
 }
 
@@ -758,7 +761,7 @@
     color: #f48c8f;
     font-family: "Lato";
     font-weight: 400;
-    padding-left: 13px;
+    padding-left: 15px;
     padding-top: 6px;
 }
 
@@ -784,7 +787,7 @@
     color: #f48c8f;
     font-family: "Lato";
     font-weight: 400;
-    padding-left: 13px;
+    padding-left: 15px;
     padding-top: 6px;
 }
 
@@ -811,7 +814,7 @@
     color: #f48c8f;
     font-family: "Lato";
     font-weight: 400;
-    padding-left: 11px;
+    padding-left: 13px;
     padding-top: 6px;
 }
 
@@ -913,7 +916,13 @@
 }
 
 .footer__copyright {
-    padding-left: 3px;
+    padding-left: 2px;
+    font-size: 12px;
+    line-height: 6px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
 }
 
 .footer__icon {
