@@ -18,7 +18,7 @@
     font-size: 18.03448pt;
     line-height: 6px;
     color: #ffffff;
-    font-family: "Lato",sans-serif;;
+    font-family: "Lato",sans-serif;
     font-weight: 700;
     margin-left: 40px;
     padding-bottom: 1px;
@@ -35,7 +35,7 @@
     font-size: 8.65655pt;
     line-height: 6px;
     color: #ffffff;
-    font-family: "Lato",sans-serif;;
+    font-family: "Lato",sans-serif;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -701,7 +701,7 @@
     font-size: 18px;
     line-height: 30px;
     color: #f0d8d9;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 300;
     text-align: left;
     padding-bottom: 47px;
@@ -724,7 +724,7 @@
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     text-align: left;
     margin-bottom: 16px;
@@ -734,7 +734,17 @@
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    padding-left: 15px;
+    padding-top: 6px; 
+}
+
+.form__name::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     padding-left: 15px;
     padding-top: 6px; 
@@ -749,7 +759,7 @@
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     text-align: left;
     margin-bottom: 16px;
@@ -759,7 +769,17 @@
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    padding-left: 15px;
+    padding-top: 6px;
+}
+
+.form__mail::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     padding-left: 15px;
     padding-top: 6px;
@@ -775,7 +795,7 @@
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     text-align: left;
     margin-bottom: 16px;
@@ -785,7 +805,17 @@
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    padding-left: 15px;
+    padding-top: 6px;
+}
+
+.form__subject::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     padding-left: 15px;
     padding-top: 6px;
@@ -801,7 +831,7 @@
     font-size: 18px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     text-align: left;
     margin-bottom: 16px;
@@ -812,7 +842,17 @@
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    padding-left: 13px;
+    padding-top: 6px;
+}
+
+.form__textarea::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     padding-left: 13px;
     padding-top: 6px;
@@ -827,7 +867,7 @@
     font-size: 16px;
     line-height: 22px;
     color: #f0d8d9;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     text-align: center;
     cursor: pointer;
@@ -852,7 +892,7 @@
     font-size: 18px;
     line-height: 18px;
     color: #f0d8d9;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 900;
     text-align: left;
     padding-bottom: 9px;
@@ -863,7 +903,7 @@
     font-size: 12px;
     line-height: 22px;
     color: #f0d8d9;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     text-align: left;
     padding-bottom: 20px;
@@ -874,7 +914,7 @@
     font-size: 12px;
     line-height: 22px;
     color: #f0d8d9;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     text-align: left;
     text-decoration: none;
@@ -920,7 +960,7 @@
     font-size: 12px;
     line-height: 6px;
     color: #666d89;
-    font-family: "Lato";
+    font-family: "Lato",sans-serif;
     font-weight: 400;
     text-align: left;
 }
