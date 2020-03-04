@@ -13,27 +13,29 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <h1 class="logo">SINGOLO<span>*</span></h1>
-            <ul class="navigation">
-                <li class="navigation__item">Home</li>
-                <li class="navigation__item">Services</li>
-                <li class="navigation__item">Portfolio</li>
-                <li class="navigation__item">About</li>
-                <li class="navigation__item">Contact</li>
-            </ul>
+            <h1 class="header__logo">singolo<span>*</span></h1>
+            <nav>
+                <ul class="navigation">
+                    <li class="navigation__item">Home</li>
+                    <li class="navigation__item">Services</li>
+                    <li class="navigation__item">Portfolio</li>
+                    <li class="navigation__item">About</li>
+                    <li class="navigation__item">Contact</li>
+                </ul>
+            </nav>
         </header>
         <div class="header__bottom"></div>
         <section class="slider">
-            <img src="./assets/images/arrow-left.png" alt="button" class="btn-left">
-            <img src="./assets/images/phone-ver.png" alt="phone" class="phone-ver">
-            <img src="./assets/images/phone-gor.png" alt="phone" class="phone-gor">
-            <img src="./assets/images/Shadow-ver.png" alt="shadow" class="shadow-ver">
-            <img src="./assets/images/Shadow-gor.png" alt="shadow" class="shadow-gor">
-            <img src="./assets/images/arrow-right.png" alt="button" class="btn-right">
+            <img src="./assets/images/arrow-left.png" alt="button" class="slider__btn_left">
+            <img src="./assets/images/phone-ver.png" alt="phone" class="slider__phone_ver">
+            <img src="./assets/images/phone-gor.png" alt="phone" class="slider__phone_gor">
+            <img src="./assets/images/Shadow-ver.png" alt="shadow" class="slider__shadow_ver">
+            <img src="./assets/images/Shadow-gor.png" alt="shadow" class="slider__shadow_gor">
+            <img src="./assets/images/arrow-right.png" alt="button" class="slider__btn_right">
         </section>
         <div class="slider__bottom"></div>
         <section class="service">
-            <h2 class="service__head">Our Services</h2>
+            <h2 class="service__title">Our Services</h2>
             <h3 class="service__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                 mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
                 tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
@@ -91,7 +93,7 @@
         <div class="service__bottom"></div>
         <section class="portfolio">
             <div class="portfolio__wrapper">
-                <h2 class="portfolio__head">Portfolio</h2>
+                <h2 class="portfolio__title">Portfolio</h2>
                 <h3 class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
                     lacinia odio sem nec elit.</h3>
                 <div class="button-container">
@@ -119,7 +121,7 @@
         <div class="portfolio__bottom"></div>
         <section class="about-us">
             <div class="about-us__wrapper">
-                <h2 class="about-us__head">About Us</h2>
+                <h2 class="about-us__title">About Us</h2>
                 <h3 class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                     Duis
                     mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
@@ -128,7 +130,7 @@
                 <div class="members-container">
                     <div class="member">
                         <img src="./assets/images/photo1.png" alt="photo" class="member__photo">
-                        <h3 class="member__head">Adam Jensen</h3>
+                        <h3 class="member__title">Adam Jensen</h3>
                         <p class="member__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus
                             purus,
                             nec rutrum tellus dolor id lorem.</p>
@@ -149,7 +151,7 @@
                     </div>
                     <div class="member">
                         <img src="./assets/images/photo2.png" alt="photo" class="member__photo">
-                        <h3 class="member__head">Desmond Miles</h3>
+                        <h3 class="member__title">Desmond Miles</h3>
                         <p class="member__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
                             laoreet, viverra lacus ut, ultrices velit.</p>
                         <div class="icon-container">
@@ -169,7 +171,7 @@
                     </div>
                     <div class="member">
                         <img src="./assets/images/photo3.png" alt="photo" class="member__photo">
-                        <h3 class="member__head">Scolara Visari</h3>
+                        <h3 class="member__title">Scolara Visari</h3>
                         <p class="member__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
                             turpis, et
                             consequat felis. Quisque condimentum.</p>
@@ -194,24 +196,24 @@
         <div class="about-us__bottom"></div>
         <section class="quote">
             <div class="quote__wrapper">
-                <h2 class="quote__head">Get a Quote</h2>
+                <h2 class="quote__title">Get a Quote</h2>
                 <h3 class="quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                     mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
                     dapibus,
                     tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
                 <div class="contact-container">
-                    <form action="#" class="form">
+                    <form action="#" method="GET" class="form">
                         <input type="text" name="name" id="name" class="form__name" placeholder="Name (Required)"
                             required>
-                        <input type="mail" name="mail" id="mail" class="form__mail" placeholder="Email (Required)"
+                        <input type="email" name="mail" id="email" class="form__mail" placeholder="Email (Required)"
                             required>
                         <input type="text" name="subject" id="subject" class="form__subject" placeholder="Subject">
                         <textarea name="textarea" id="textarea" class="form__textarea"
-                            placeholder="Describe your project in detail..." maxlength="140" rows="5"></textarea>
+                            placeholder="Describe your project in detail..." maxlength="400" rows="5"></textarea>
                         <button type="submit" name="submit" id="submit" class="form__submit">Submit</button>
                     </form>
                     <div class="contact">
-                        <h3 class="contact__head">Contact Information</h3>
+                        <h3 class="contact__title">Contact Information</h3>
                         <p class="contact__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
                             nibh.
                             Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus
@@ -251,7 +253,7 @@
                     </a>
                 </div>
             </div>
-    </footer>
+        </footer>
     </div>
 </body>
 

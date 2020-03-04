@@ -14,23 +14,24 @@
 }
 
 
-.logo {
-    font-size: 18.03448pt;
+.header__logo {
+    font-size: 25px;
     line-height: 6px;
     color: #ffffff;
     font-family: "Lato",sans-serif;
     font-weight: 700;
     margin-left: 40px;
     padding-bottom: 1px;
+    text-transform: uppercase;
 }
 
-.logo span {
+.header__logo span {
     color: #f06c64;
 }
 
 .navigation {
     display: flex;
-    margin-top: 7px;
+    margin-top: 10px;
     margin-right: 40px; 
     font-size: 8.65655pt;
     line-height: 6px;
@@ -68,7 +69,7 @@
 
 .header__bottom {
     width: 1020px;
-    height: 4px;
+    height: 6px;
     background-color: #323746;
    
 }
@@ -89,7 +90,7 @@
     background-color: #ea676b;
    
 }
-.phone-ver {
+.slider__phone_ver {
     position: absolute;
     bottom: 83px;
     left: 110px;
@@ -97,7 +98,7 @@
     border-radius: 20px;
 }
 
-.phone-gor {
+.slider__phone_gor {
     position: absolute;
     bottom: 204px;
     left: 426px;
@@ -105,38 +106,38 @@
     border-radius: 20px;
  }
 
-.shadow-ver {
+.slider__shadow_ver {
     position: absolute;
     top: 54px;
     left: 112px;
     z-index: 0;
 }
 
-.shadow-gor {
+.slider__shadow_gor {
     position: absolute;
     top: 174px;
     left: 427px;
     z-index: 0;
 }
 
-.btn-left {
+.slider__btn_left {
     position: absolute;
     top: 281px;
     left: 42px;
 }
 
-.btn-left:hover {
+.slider__btn_left:hover {
     opacity: 0.7;
     cursor: pointer;
 }
 
-.btn-right {
+.slider__btn_right {
     position: absolute;
     top: 281px;
     right: 40px;
 }
 
-.btn-right:hover {
+.slider__btn_right:hover {
     opacity: 0.7;
     cursor: pointer;
 }
@@ -161,7 +162,7 @@
    
 }
 
-.service__head {
+.service__title {
     margin-left: 40px;
     padding-top: 68px;
     font-size: 30px;
@@ -491,7 +492,7 @@
     margin: 0 auto;
 }
 
-.portfolio__head {
+.portfolio__title {
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
@@ -585,14 +586,14 @@
     margin: 0 auto;
 }
 
-.about-us__head {
+.about-us__title {
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
     font-family: "Lato",sans-serif;
     font-weight: 900;
     text-align: left;
-    padding-top: 69px;
+    padding-top: 67px;
     padding-bottom: 27px;
 }
 
@@ -624,7 +625,7 @@
     height: 300px;
 }
 
-.member__head {
+.member__title {
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
@@ -684,14 +685,14 @@
     margin: 0 auto;
 }
 
-.quote__head {
+.quote__title {
     font-size: 30px;
     line-height: 18px;
     color: #f0d8d9;
     font-family: "Lato",sans-serif;
     font-weight: 900;
     text-align: left;
-    padding-top: 69px;
+    padding-top: 67px;
     padding-bottom: 27px;
 }
 
@@ -878,6 +879,10 @@
     background-color: #d6564f;
 }
 
+.form input:invalid {
+    border: 1px solid red;
+}
+
 .contact-container {
     width: 100%;
     display: flex;
@@ -888,7 +893,7 @@
     width: 301px;
 }
 
-.contact__head {
+.contact__title {
     font-size: 18px;
     line-height: 18px;
     color: #f0d8d9;
