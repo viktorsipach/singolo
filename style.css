@@ -45,14 +45,10 @@
     color: rgba(240, 108, 100, 255);
 }
 
-.navigation__item:first-child:hover {
-    cursor: pointer;
-    color: #ffffff;
-}
-
 .navigation__item:hover {
     cursor: pointer;
     color: rgba(240, 108, 100, 255);
+    transition: all .3s ease-out;
 }
 
 .navigation__item::after {
@@ -129,6 +125,7 @@
 .slider__btn_left:hover {
     opacity: 0.7;
     cursor: pointer;
+    transition: all .1s ease-out;
 }
 
 .slider__btn_right {
@@ -140,6 +137,7 @@
 .slider__btn_right:hover {
     opacity: 0.7;
     cursor: pointer;
+    transition: all .1s ease-out;
 }
 
 .service {
@@ -541,6 +539,7 @@
     cursor: pointer;
     color: #dedede;
     border: 1px solid #c5c5c5;
+    transition: all .3s ease-out;
 }
 
 .active {
@@ -656,6 +655,7 @@
 
 .icon:hover {
     opacity: 0.7;
+    transition: all .3s ease-out;
 }
 
 .about-us__bottom {
@@ -872,7 +872,7 @@
     font-weight: 400;
     text-align: center;
     cursor: pointer;
-    transition: all .3 ease-out;
+    transition: all .3s ease-out;
 }
 
 .form__submit:hover {
