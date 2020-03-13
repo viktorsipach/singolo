@@ -39,17 +39,12 @@
    
 }
 
-.navigation__item {
+.navigation__link {
     font-size: 8.65655pt;
-    color: #ffffff;
     line-height: 6px;
     font-family: "Lato",sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    text-decoration: none;
-}
-
-.navigation__link {
     color: #ffffff;
     text-decoration: none;
 }
@@ -73,6 +68,12 @@
 }
 
 .active-link {
+    font-size: 8.65655pt;
+    line-height: 6px;
+    font-family: "Lato",sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
     color: rgba(240, 108, 100, 255);
 }
 
