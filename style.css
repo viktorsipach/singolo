@@ -54,7 +54,7 @@
     text-decoration: none;
 }
 
-.navigation__item:hover {
+.navigation__link:hover {
     cursor: pointer;
     color: rgba(240, 108, 100, 255);
     transition: all .3s ease-out;
