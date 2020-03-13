@@ -16,27 +16,33 @@
             <h1 class="header__logo">singolo<span>*</span></h1>
             <nav>
                 <ul class="navigation">
-                    <li class="navigation__item">Home</li>
-                    <li class="navigation__item">Services</li>
-                    <li class="navigation__item">Portfolio</li>
-                    <li class="navigation__item">About</li>
-                    <li class="navigation__item">Contact</li>
+                    <li class="navigation__item"><a class="navigation__link active-link" href="#slider">Home</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#service">Services</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#portfolio">Portfolio</a> </li>
+                    <li class="navigation__item"><a class="navigation__link" href="#about">About</a> </li>
+                    <li class="navigation__item"><a class="navigation__link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <div class="header__bottom"></div>
-        <main class="slider">
+        <main class="slider"  id=slider>
             <img src="./assets/images/arrow-left.png" alt="button" class="slider__btn_left" id="btn-left">
-            <img src="./assets/images/Slider.png" alt="slide" class="slide-one">
-            <img src="./assets/images/Slider1.png" alt="slide" class="slide-second hide-slide">
-            <img src="./assets/images/arrow-right.png" alt="button" class="slider__btn_right"  id="btn-right">
-            <div class="home__btn_ver"></div>
-            <div class="home__btn_gor"></div>
-            <div class="black-screen__ver hide"></div>
-            <div class="black-screen__gor hide"></div>
+            <img src="./assets/images/arrow-right.png" alt="button" class="slider__btn_right" id="btn-right">
+            <div class="slide-first__container">
+                <img src="./assets/images/Slider.png" alt="slide" class="slide-first">
+                <div class="home__btn_ver"></div>
+                <div class="home__btn_gor"></div>
+                <div class="black-screen__ver hide"></div>
+                <div class="black-screen__gor hide"></div>
+            </div>
+            <div class="slide-second__container hide-slide">
+                <img src="./assets/images/Slider1.png" alt="slide" class="slide-second">
+                <div class="home__btn"></div>
+                <div class="black-screen hide"></div>
+            </div>
         </main>
         <div class="slider__bottom"></div>
-        <section class="service">
+        <section class="service" id="service">
             <h2 class="service__title">Our Services</h2>
             <h3 class="service__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                 mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
@@ -93,7 +99,7 @@
             </div>
         </section>
         <div class="service__bottom"></div>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="portfolio__wrapper">
                 <h2 class="portfolio__title">Portfolio</h2>
                 <h3 class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
@@ -105,23 +111,23 @@
                     <button class="portfolio__btn">Artwork</button>
                 </div>
                 <div class="image-container">
-                    <img src="./assets/images/image1.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image2.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image3.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image4.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image5.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image6.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image7.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image8.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image9.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image10.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image11.png" alt="image" class="portfolio__img">
-                    <img src="./assets/images/image12.png" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image1.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image2.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image3.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image4.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image5.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image6.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image7.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image8.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image9.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image10.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image11.png" width="220" height="187" alt="image" class="portfolio__img">
+                    <img src="./assets/images/image12.png" width="220" height="187" alt="image" class="portfolio__img">
                 </div>
             </div>
         </section>
         <div class="portfolio__bottom"></div>
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="about-us__wrapper">
                 <h2 class="about-us__title">About Us</h2>
                 <h3 class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -196,7 +202,7 @@
             </div>
         </section>
         <div class="about-us__bottom"></div>
-        <section class="quote">
+        <section class="quote" id="contact">
             <div class="quote__wrapper">
                 <h2 class="quote__title">Get a Quote</h2>
                 <h3 class="quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
