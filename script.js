@@ -33,6 +33,7 @@ function load() {
     })
 
     document.querySelector('.button-container').addEventListener('click', (e) => {
+        document.querySelector('.button-container').classList.toggle('active');
         document.querySelectorAll('.portfolio__btn').forEach(el => el.classList.remove('active'));   
         e.target.classList.add('active');
 
@@ -42,14 +43,16 @@ function load() {
         imgArr[2].before(imgArr[3]);
         imgArr[3].before(imgArr[5]);
         imgArr[4].before(imgArr[6]);
-       
+        document.querySelector('.button-container').classList.toggle('active');
     })
 
     document.querySelector('.image-container').addEventListener('click', (e) => {
+        document.querySelector('.image-container').classList.toggle('active-img');
         document.querySelectorAll('.portfolio__img').forEach(el => 
             el.classList.remove('active-img') 
         );
         e.target.classList.add('active-img');
+        document.querySelector('.image-container').classList.toggle('active-img');
     })
 
     SUBMIT.addEventListener('click', (e) => {
