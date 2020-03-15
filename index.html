@@ -16,7 +16,7 @@
             <h1 class="header__logo">singolo<span>*</span></h1>
             <nav>
                 <ul class="navigation">
-                    <li class="navigation__item"><a class="navigation__link active-link" href="#slider">Home</a></li>
+                    <li class="navigation__item"><a class="navigation__link active_link" href="#slider">Home</a></li>
                     <li class="navigation__item"><a class="navigation__link" href="#service">Services</a></li>
                     <li class="navigation__item"><a class="navigation__link" href="#portfolio">Portfolio</a> </li>
                     <li class="navigation__item"><a class="navigation__link" href="#about">About</a> </li>
@@ -25,20 +25,20 @@
             </nav>
         </header>
         <div class="header__bottom"></div>
-        <main class="slider"  id=slider>
-            <img src="./assets/images/arrow-left.png" alt="button" class="slider__btn_left" id="btn-left">
-            <img src="./assets/images/arrow-right.png" alt="button" class="slider__btn_right" id="btn-right">
+        <main class="slider" id="slider">
+            <img src="./assets/images/arrow-left.png" alt="button" class="slider__btn_left">
+            <img src="./assets/images/arrow-right.png" alt="button" class="slider__btn_right">
             <div class="slide-first__container">
-                <img src="./assets/images/Slider.png" alt="slide" class="slide-first">
+                <img src="./assets/images/Slider.png" alt="slide" class="slide_first">
                 <div class="home__btn_ver"></div>
                 <div class="home__btn_gor"></div>
-                <div class="black-screen__ver hide"></div>
-                <div class="black-screen__gor hide"></div>
+                <div class="black-screen__ver hidden"></div>
+                <div class="black-screen__gor hidden"></div>
             </div>
-            <div class="slide-second__container hide-slide">
-                <img src="./assets/images/Slider1.png" alt="slide" class="slide-second">
+            <div class="slide-second__container hidden">
+                <img src="./assets/images/Slider1.png" alt="slide" class="slide_second">
                 <div class="home__btn"></div>
-                <div class="black-screen hide"></div>
+                <div class="black-screen hidden"></div>
             </div>
         </main>
         <div class="slider__bottom"></div>
@@ -104,11 +104,11 @@
                 <h2 class="portfolio__title">Portfolio</h2>
                 <h3 class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
                     lacinia odio sem nec elit.</h3>
-                <div class="button-container">
-                    <button class="portfolio__btn active">All</button>
-                    <button class="portfolio__btn">Web Design</button>
-                    <button class="portfolio__btn">Graphic Design</button>
-                    <button class="portfolio__btn">Artwork</button>
+                <div class="tags-container">
+                    <button class="portfolio__tag">All</button>
+                    <button class="portfolio__tag">Web Design</button>
+                    <button class="portfolio__tag">Graphic Design</button>
+                    <button class="portfolio__tag">Artwork</button>
                 </div>
                 <div class="image-container">
                     <img src="./assets/images/image1.png" width="220" height="187" alt="image" class="portfolio__img">
@@ -211,14 +211,14 @@
                     tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
                 <div class="contact-container">
                     <form action="#" method="GET" class="form">
-                        <input type="text" name="name" id="name" class="form__name" placeholder="Name (Required)"
+                        <input type="text" name="name" class="form__name" placeholder="Name (Required)"  autocomplete="off"
                             required>
-                        <input type="email" name="mail" id="email" class="form__mail" placeholder="Email (Required)"
+                        <input type="email" name="email" class="form__email" placeholder="Email (Required)" autocomplete="off"
                             required>
-                        <input type="text" name="subject" id="subject" class="form__subject" placeholder="Subject">
-                        <textarea name="textarea" id="textarea" class="form__textarea"
+                        <input type="text" name="subject" class="form__subject" placeholder="Subject" autocomplete="off">
+                        <textarea name="textarea" class="form__textarea" autocomplete="off"
                             placeholder="Describe your project in detail..." maxlength="400" rows="5"></textarea>
-                        <button type="submit" name="submit" id="submit" class="form__submit">Send</button>
+                        <button type="submit" name="submit" class="form__submit">Send</button>
                     </form>
                     <div class="contact">
                         <h3 class="contact__title">Contact Information</h3>
@@ -263,12 +263,12 @@
             </div>
         </footer>
     </div>
-    <div id="message-block" class="hidden">
-        <div id="message">
+    <div class="message-block hidden">
+        <div class="message">
             <h3>Письмо отправлено</h3>
-            <p id="subject-text"></p>
-            <p id="describe"></p>
-            <button id="btn-ok">Ok</button>
+            <p class="subject-text"></p>
+            <p class="describe"></p>
+            <button class="btn-ok">Ok</button>
         </div>
     </div>
     <script src="./script.js"></script>

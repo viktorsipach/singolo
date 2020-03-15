@@ -67,7 +67,7 @@
     content: none;
 }
 
-.active-link {
+.active_link {
     font-size: 8.65655pt;
     line-height: 6px;
     font-family: "Lato",sans-serif;
@@ -104,29 +104,20 @@
    
 }
 
-.slide-first {
+.slide_first {
     position: absolute;
     left: 0px;
     bottom: 0px; 
     z-index: 0;
-    transition: all .5s ease;
+    transition: all 5s ease-in;
 }
 
-.slide-second {
+.slide_second {
     position: absolute;
     left: 0px;
     bottom: 0px; 
     z-index: 0;
-    transition: all .5s ease;
-}
-
-.show-slide {
-    opacity: 1;
-   
-}
-
-.hide-slide {
-    opacity: 0;
+    transition: all 5s ease-in;
 }
 
 .home__btn {
@@ -176,7 +167,7 @@
     left: 398px;
     bottom: 128px;
     background-color: #131313;
-    transition: all .5s ease;
+    transition: all .5s ease-in;
     z-index: 1;
 }
 
@@ -202,46 +193,6 @@
     background-color: #131313;
     transition: all .5s ease;
     z-index: 1;
-}
-
-.hide {
-    display: none;
-}
-
-
-
-.slider__phone_ver {
-    position: absolute;
-    bottom: 83px;
-    left: 110px;
-    z-index: 0;
-    border-radius: 20px;
-}
-
-.slider__phone_ver:hover {
-    cursor: pointer;
-}
-
-.slider__phone_gor {
-    position: absolute;
-    bottom: 204px;
-    left: 426px;
-    z-index: 0;
-    border-radius: 20px;
- }
-
-.slider__shadow_ver {
-    position: absolute;
-    top: 54px;
-    left: 112px;
-    z-index: 0;
-}
-
-.slider__shadow_gor {
-    position: absolute;
-    top: 174px;
-    left: 427px;
-    z-index: 0;
 }
 
 .slider__btn_left {
@@ -650,7 +601,7 @@
     text-align: left;
 }
 
-.button-container {
+.tags-container {
     width: 289px;
     height: 23px;
     display: flex;
@@ -659,7 +610,7 @@
     padding-bottom: 18px;
 }
 
-.portfolio__btn {
+.portfolio__tag {
     height: 22px;
     display: flex;
     align-items: center;
@@ -673,19 +624,19 @@
     text-align: left;
 }
 
-.portfolio__btn:hover {
+.portfolio__tag:hover {
     cursor: pointer;
     color: #dedede;
     border: 1px solid #c5c5c5;
     transition: all .3s ease-out;
 }
 
-.active {
+.active_tag {
     color: #dedede;
     border: 1px solid #c5c5c5;
 }
 
-.active-img {
+.active_img {
     width: 210px;
     height: 177px;
     border: 5px solid #F06C64;
@@ -865,7 +816,7 @@
     background-color: #d6564f;
     border: 0;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 22px;
     color: #f48c8f;
     font-family: "Lato",sans-serif;
@@ -894,13 +845,13 @@
     padding-top: 6px; 
 }
 
-.form__mail {
+.form__email {
     width: 100%;
     height: 36px;
     background-color: #d6564f;
     border: 0;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 22px;
     color: #f48c8f;
     font-family: "Lato",sans-serif;
@@ -909,7 +860,7 @@
     margin-bottom: 16px;
 }
 
-.form__mail::placeholder {
+.form__email::placeholder {
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
@@ -919,7 +870,7 @@
     padding-top: 6px;
 }
 
-.form__mail::-ms-input-placeholder {
+.form__email::-ms-input-placeholder {
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
@@ -936,7 +887,7 @@
     background-color: #d6564f;
     border: 0;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 22px;
     color: #f48c8f;
     font-family: "Lato",sans-serif;
@@ -1024,8 +975,22 @@
     opacity: 0.7;
 }
 
-.form input:invalid {
-    border: 1px solid red;
+.form__name:invalid {
+    border: 1px solid rgba(255,0,0,0.5);
+
+}
+
+.form__name:valid {
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+.form__email:invalid {
+    border: 1px solid rgba(255,0,0,0.5);
+
+}
+
+.form__email:valid {
+    border: 1px solid rgba(0,0,0,0.4);
 }
 
 .contact-container {
@@ -1123,11 +1088,11 @@
     padding-bottom: 3px;
 }
 
-#message-block {
-    position: absolute;
+.message-block {
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    bottom: 0;
+    top: 0;
     left: 0;
     line-height: 22px;
     color: #131313;
@@ -1137,31 +1102,36 @@
     z-index: 2;
 }
 
-#message-block.hidden {
+.hidden {
     display: none;
 }
 
-#message {
-    width: max-content;
-    height: max-content;
+.message {
+    width: 30%;
+    height: auto;
     position: absolute;
     top: 45%;
-    left: 45%;
+    left: calc(100vw/3);
     border: 2px solid #131313;
     text-align: center;
     background: #ffffff;
- 
+    overflow-wrap: break-word;
+
 }
 
-#message h3 {
+.message h3 {
     padding: 10px;
 }
 
-#message p {
+.message p {
     padding: 5px;
 }
 
-#btn-ok {
-    cursor: pointer;
+.btn-ok {
+    width: 10%;
     margin-bottom: 10px;
+    cursor: pointer;
+    background:#FBC65F;
+    border: 0;
+    border-radius: 3px;
 }
