@@ -118,16 +118,16 @@ const addClickSubmitHandler = () => {
     const describe = document.querySelector('.form__textarea');
 
     submit.addEventListener('click', (e) => {
-        if (subject.value === 'Singolo' || subject.value === 'singolo') {
-            document.querySelector('.subject-text').innerText = `Тема: ${subject.value.toString()}`;  
+        if (subject.value !== '') {
+            document.querySelector('.subject-text').innerText = `Subject: ${subject.value.toString()}`;  
         } else {
-            document.querySelector('.subject-text').innerText = 'Без темы';
+            document.querySelector('.subject-text').innerText = 'No subject';
         };
 
-        if (describe.value === 'Portfolio project') {
-            document.querySelector('.describe').innerText = `Описание: ${describe.value.toString()}`; 
+        if (describe.value !== '') {
+            document.querySelector('.describe').innerText = `Description: ${describe.value.toString()}`; 
         } else {
-            document.querySelector('.describe').innerText = 'Без описания';
+            document.querySelector('.describe').innerText = 'No description';
         };
       
         if (name.value !== '' && email.validity.valid) {
