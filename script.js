@@ -121,13 +121,13 @@ const addClickSubmitHandler = () => {
         if (subject.value !== '') {
             document.querySelector('.subject-text').innerText = `Subject: ${subject.value.toString()}`;  
         } else {
-            document.querySelector('.subject-text').innerText = 'No subject';
+            document.querySelector('.subject-text').innerText = 'Without subject';
         };
 
         if (describe.value !== '') {
             document.querySelector('.describe').innerText = `Description: ${describe.value.toString()}`; 
         } else {
-            document.querySelector('.describe').innerText = 'No description';
+            document.querySelector('.describe').innerText = 'Without description';
         };
       
         if (name.value !== '' && email.validity.valid) {
