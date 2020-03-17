@@ -16,7 +16,6 @@ const addClickMenuHandler = () => {
             removeSelectedLink();
             selectClickedLink(clickedLink);
             getScrollPosition(clickedLink);
-           
         }
     })
 };
