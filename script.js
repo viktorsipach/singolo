@@ -15,6 +15,8 @@ const addClickMenuHandler = () => {
             let clickedLink = e.target;
             removeSelectedLink();
             selectClickedLink(clickedLink);
+            getScrollPosition(clickedLink);
+           
         }
     })
 };
@@ -29,6 +31,20 @@ const removeSelectedLink = () => {
 const selectClickedLink = (link) => {
     link.classList.add('active_link');
 };
+
+const getScrollPosition = (link) => {
+    if (link.name === 'service') {
+        window.scrollTo(pageXOffset, 600);
+    } else if (link.name === 'portfolio') {
+        window.scrollTo(pageXOffset, 1130);
+    } else if (link.name === 'about') {
+        window.scrollTo(pageXOffset, 1984);
+    } else if (link.name === 'contact') {
+        window.scrollTo(pageXOffset, 2729);
+    } else {
+        window.scrollTo(pageXOffset, 0);
+    }
+}
 
 const addClickTagsHandler = () => {
     document.querySelector('.tags-container').addEventListener('click', (e) => {
