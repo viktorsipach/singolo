@@ -1,13 +1,36 @@
 window.onload = () => {
+    addScrollMenuHandler();
     addClickMenuHandler();
     addClickTagsHandler();
     addClickSliderHandler();
     addClickBlackScreenHandler();
     addClickImgHandler();
     addClickSubmitHandler();
-    addClickModalCloseHandler();
-    
+    addClickModalCloseHandler(); 
 };
+
+const addScrollMenuHandler = () => {
+    document.addEventListener('scroll', onScroll);
+};
+
+const onScroll = () => {
+    const curPos = window.scrollY;
+    const sections = document.querySelectorAll('.wrapper>section');
+    const links = document.querySelectorAll('.navigation__link');
+    const HEIGHT_HEADER = 89;
+
+    sections.forEach((el) => {
+        el.getAttribute('class');
+        if ((el.offsetTop <= curPos + HEIGHT_HEADER) && (el.offsetTop + el.offsetHeight) > curPos) {
+            links.forEach((a) => {
+                a.classList.remove('active_link');
+                if (el.getAttribute('class') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active_link');
+                }
+            })
+        };
+    });
+}
 
 const addClickMenuHandler = () => {
     document.querySelector('.navigation').addEventListener('click', (e) => {
@@ -153,8 +176,10 @@ const addClickSubmitHandler = () => {
 };
 
 const addClickModalCloseHandler = () => {
+    const form = document.querySelector('.form');
     const close_btn = document.querySelector('.btn-ok');
     close_btn.addEventListener('click', () => {
+        form.reset();
         document.querySelector('.subject-text').innerText = '';
         document.querySelector('.describe').innerText = '';
         document.querySelector('.message-block').classList.add('hidden');
