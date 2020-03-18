@@ -101,29 +101,49 @@ const changeImgPosition = () => {
 
 const addClickBlackScreenHandler = () => {
     document.querySelector('.home__btn_ver').addEventListener('click', () => {
-        document.querySelector('.black-screen__ver').classList.toggle('hidden');
+        document.querySelector('.black-screen__ver').classList.toggle('hidden_screen');
     })
     
     document.querySelector('.home__btn_gor').addEventListener('click', () => {
-        document.querySelector('.black-screen__gor').classList.toggle('hidden');
+        document.querySelector('.black-screen__gor').classList.toggle('hidden_screen');
     })
 
     document.querySelector('.home__btn').addEventListener('click', () => {
-        document.querySelector('.black-screen').classList.toggle('hidden');
+        document.querySelector('.black-screen').classList.toggle('hidden_screen');
     })
     
 };
 
 const addClickSliderHandler = () => {
+    const firstSlide = document.querySelector('.slide-first__container');
+    const secondSlide = document.querySelector('.slide-second__container');
+
     document.querySelector('.slider__btn_left').addEventListener('click', () => {
-        document.querySelector('.slide-first__container').classList.toggle('hidden');
-        document.querySelector('.slide-second__container').classList.toggle('hidden');
-      
+        if (firstSlide.classList.contains('slide_show')) { 
+            firstSlide.classList.add('slide_hidden');  
+            firstSlide.classList.remove('slide_show');  
+            secondSlide.classList.toggle('slide_show');
+            document.querySelector('.slider').style.background = '#648BF0';
+        } else if (secondSlide.classList.contains('slide_show')) {
+            secondSlide.classList.add('slide_hidden'); 
+            secondSlide.classList.remove('slide_show');  
+            firstSlide.classList.toggle('slide_show');
+            document.querySelector('.slider').style.background = '#f06c64';
+        } 
     })
 
     document.querySelector('.slider__btn_right').addEventListener('click', () => {
-        document.querySelector('.slide-first__container').classList.toggle('hidden');
-        document.querySelector('.slide-second__container').classList.toggle('hidden');
+        if (firstSlide.classList.contains('slide_show')) { 
+            firstSlide.classList.add('slide_hidden');  
+            firstSlide.classList.remove('slide_show');  
+            secondSlide.classList.toggle('slide_show');
+            document.querySelector('.slider').style.background = '#648BF0';
+        } else if (secondSlide.classList.contains('slide_show')) {
+            secondSlide.classList.add('slide_hidden'); 
+            secondSlide.classList.remove('slide_show');  
+            firstSlide.classList.toggle('slide_show');
+            document.querySelector('.slider').style.background = '#f06c64';
+        } 
     })
 };
 
