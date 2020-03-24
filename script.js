@@ -91,7 +91,7 @@ const selectClickedTag = (btn) => {
 };
 
 const changeImgPosition = () => {
-    const imgArr = document.querySelectorAll('.portfolio__img');
+    const imgArr = document.querySelectorAll('.portfolio__list');
         imgArr[0].before(imgArr[10]);
         imgArr[1].before(imgArr[11]);
         imgArr[2].before(imgArr[3]);
