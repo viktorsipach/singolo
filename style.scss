@@ -417,14 +417,6 @@ html {
     margin: 0 auto;
     background-color:#2d303a;
     border-bottom: 6px solid #323746;
-
-    @media (max-width: 768px) {
-        width: 100%;
-
-        .portfolio__list:nth-child(n+9) {
-            display: none;
-          }
-    }
 }
 
 
@@ -1113,3 +1105,10 @@ html {
         opacity: 0.7;
     }
  }
+
+ @media (max-width:765px) {
+    .portfolio__list:nth-child(n+9) {
+        display: none;
+    }
+}
+ 
