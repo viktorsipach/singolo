@@ -75,7 +75,7 @@ html {
     padding-bottom: 24px;
     padding-top: 23px;
     padding-left: 0;
-    padding-right: 80px;
+    padding-right: 40px;
   }
 }
 
@@ -511,16 +511,13 @@ html {
 }
 
 .tags-container {
-  width: 280px;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-bottom: 18px;
   padding-left: 40px;
 }
@@ -529,16 +526,11 @@ html {
   .tags-container {
     padding-left: 30px;
     padding-right: 30px;
+    width: 90%;
   }
 }
 
 .portfolio__tag {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 5px;
   background-color: #2d303a;
   border: 1px solid #666d89;
@@ -547,9 +539,10 @@ html {
   color: #767e9e;
   font-family: "Lato",sans-serif;
   font-weight: 400;
-  text-align: left;
+  text-align: center;
   padding-bottom: 6px;
   padding-top: 4px;
+  margin-right: 10px;
 }
 
 .portfolio__tag:hover {
@@ -1140,7 +1133,7 @@ html {
 
 @media (max-width: 765px) {
   .form__submit {
-    width: 100%;
+    width: 102%;
   }
 }
 
