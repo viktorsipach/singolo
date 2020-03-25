@@ -60,9 +60,9 @@ const getScrollPosition = (link) => {
     } else if (link.name === 'portfolio') {
         window.scrollTo(pageXOffset, 1130);
     } else if (link.name === 'about') {
-        window.scrollTo(pageXOffset, 1984);
+        window.scrollTo(pageXOffset, 2050);
     } else if (link.name === 'contact') {
-        window.scrollTo(pageXOffset, 2729);
+        window.scrollTo(pageXOffset, 2829);
     } else {
         window.scrollTo(pageXOffset, 0);
     }
