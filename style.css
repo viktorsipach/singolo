@@ -39,7 +39,7 @@ html {
 
 @media (max-width: 1020px) {
   .header {
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -67,19 +67,15 @@ html {
   text-transform: uppercase;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 765px) {
   .header__logo {
     text-align: center;
     font-size: 2rem;
     line-height: 2.4rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .header__logo {
     padding-bottom: 24px;
     padding-top: 23px;
     padding-left: 0;
+    padding-right: 80px;
   }
 }
 
@@ -161,7 +157,7 @@ html {
 @media (max-width: 700px) {
   .slider {
     width: 100%;
-    padding-top: 20%;
+    padding-top: 18%;
   }
 }
 
@@ -525,7 +521,6 @@ html {
 
 .tags-container {
   width: 280px;
-  height: 23px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,7 +542,6 @@ html {
 }
 
 .portfolio__tag {
-  height: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,10 +552,13 @@ html {
   background-color: #2d303a;
   border: 1px solid #666d89;
   font-size: 1.2rem;
+  line-height: 1.2rem;
   color: #767e9e;
   font-family: "Lato",sans-serif;
   font-weight: 400;
   text-align: left;
+  padding-bottom: 6px;
+  padding-top: 4px;
 }
 
 .portfolio__tag:hover {
