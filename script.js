@@ -7,6 +7,8 @@ window.onload = () => {
     addClickImgHandler();
     addClickSubmitHandler();
     addClickModalCloseHandler(); 
+    addClickBurgerMenuHandler();
+    addClickHideBurgerMenuHandler();
 };
 
 const addScrollMenuHandler = () => {
@@ -62,7 +64,7 @@ const getScrollPosition = (link) => {
     } else if (link.name === 'about') {
         window.scrollTo(pageXOffset, 2050);
     } else if (link.name === 'contact') {
-        window.scrollTo(pageXOffset, 2829);
+        window.scrollTo(pageXOffset, 3800);
     } else {
         window.scrollTo(pageXOffset, 0);
     }
@@ -92,8 +94,8 @@ const selectClickedTag = (btn) => {
 
 const changeImgPosition = () => {
     const imgArr = document.querySelectorAll('.portfolio__list');
-        imgArr[0].before(imgArr[10]);
-        imgArr[1].before(imgArr[11]);
+        imgArr[0].before(imgArr[11]);
+        imgArr[1].before(imgArr[10]);
         imgArr[2].before(imgArr[3]);
         imgArr[3].before(imgArr[5]);
         imgArr[4].before(imgArr[6]);
@@ -207,4 +209,28 @@ const addClickModalCloseHandler = () => {
 };
 
 
+const addClickBurgerMenuHandler = () => {
+    const burgerMenu = document.querySelector('.burger__menu');
+    const logo = document.querySelector('.header__logo');
+    const nav = document.querySelector('.navigation');
 
+    burgerMenu.addEventListener('click', () => {
+        burgerMenu.classList.toggle('burger__menu_transform');
+        logo.classList.toggle('logo__mobile');
+        nav.classList.toggle('navigation__mobile');
+    })
+}
+
+const addClickHideBurgerMenuHandler = () => {
+    const burgerMenu = document.querySelector('.burger__menu');
+    const logo = document.querySelector('.header__logo');
+    const nav = document.querySelector('.navigation');
+
+    nav.addEventListener('click', (e) => {
+        if (e.target.classList.contains('navigation__mobile')) {
+            burgerMenu.classList.toggle('burger__menu_transform');
+            logo.classList.toggle('logo__mobile');
+            nav.classList.toggle('navigation__mobile');
+        }
+    })
+}

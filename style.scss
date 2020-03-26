@@ -29,7 +29,7 @@ html {
     border-bottom: 6px solid #323746;
 
     @media (max-width: 1020px) {
-        width: 100%;
+        width: 100vw;
     }
 }
 
@@ -41,6 +41,13 @@ html {
         text-align: left;
         padding-left: 20px;
     }
+}
+
+.burger__menu_transform {
+    padding-bottom: 20px;
+    padding-left: 0;
+    transform: rotate(90deg);
+    transition: all .5s ease;
 }
 
 .header__logo {
@@ -70,6 +77,12 @@ html {
     color: #f06c64;
 }
 
+.logo__mobile {
+    padding-right: 185px;
+    padding-left: 20px;
+    transition: all .5s ease;
+}
+
 .navigation {
     display: flex;
     padding-bottom: 42px;
@@ -77,11 +90,39 @@ html {
     padding-right: 40px;
 
     @media (max-width:767px) {
-       display: none;
+        position: absolute;
+        left: -80%;
+        display: flex;
+        flex-direction: column;
+        top: 70px;
+        background-color:  #2D303A;
+        width: 45%;
+        height: 100vh;
+        padding-left: 71px;
+        padding-top: 161px
     }
    
 }
 
+.navigation__mobile {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    background-color:  #2D303A;
+    width: 45%;
+    height: 100vh;
+    padding-left: 71px;
+    padding-top: 161px;
+    transition: all .5s ease;
+}
+
+.navigation__item {
+    @media (max-width:767px) {
+        padding-bottom: 27px;
+    }   
+}
 .navigation__link {
     font-size: 1.2rem;
     line-height: 1.4rem;
@@ -90,14 +131,22 @@ html {
     text-transform: uppercase;
     color: #ffffff;
     text-decoration: none;
+
+    @media (max-width:767px) {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+    }   
 }
 
 .navigation__item::after {
     content: "•";
     padding-right: 12px;
     padding-left: 12px;
-    color: #3c404f
-    
+    color: #3c404f;
+
+    @media (max-width:767px) {
+        content: none;
+    }   
 }
 
 .navigation__item:last-child::after {
@@ -105,12 +154,6 @@ html {
 }
 
 .active_link {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    font-family: "Lato",sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
     color: rgba(240, 108, 100, 255);
 }
 
@@ -464,7 +507,7 @@ html {
     @media (max-width: 765px) {
         padding-left: 30px;
         padding-right: 30px;
-        width: 90%;
+        width: 95%;
     }
 }
 
