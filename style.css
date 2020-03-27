@@ -224,6 +224,13 @@ html {
   }
 }
 
+@media (max-width: 374px) {
+  .slider {
+    width: 100%;
+    padding-top: 24%;
+  }
+}
+
 .slide-first__container {
   position: absolute;
   bottom: 0;
@@ -406,6 +413,7 @@ html {
   height: auto;
   background-color: #f2f2f2;
   border-bottom: 4px solid #ffffff;
+  scroll-margin-top: 68px;
 }
 
 .service__title {
@@ -530,9 +538,15 @@ html {
 .portfolio {
   width: 100%;
   height: auto;
-  margin: 0 auto;
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
+  scroll-margin-top: 68px;
+}
+
+@media (max-width: 765px) {
+  .portfolio {
+    scroll-margin-top: 42px;
+  }
 }
 
 .portfolio__title {
@@ -688,6 +702,13 @@ html {
   margin: 0 auto;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
+  scroll-margin-top: 68px;
+}
+
+@media (max-width: 765px) {
+  .about-us {
+    scroll-margin-top: 42px;
+  }
 }
 
 .about-us__title {
@@ -830,6 +851,13 @@ html {
   margin: 0 auto;
   background-color: #f06c64;
   border-bottom: 6px solid  #ea676b;
+  scroll-margin-top: 68px;
+}
+
+@media (max-width: 765px) {
+  .quote {
+    scroll-margin-top: 42px;
+  }
 }
 
 .quote__title {

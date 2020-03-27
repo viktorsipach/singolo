@@ -40,7 +40,6 @@ const addClickMenuHandler = () => {
             let clickedLink = e.target;
             removeSelectedLink();
             selectClickedLink(clickedLink);
-            getScrollPosition(clickedLink);
         }
     })
 };
@@ -213,9 +212,7 @@ const addClickBurgerMenuHandler = () => {
     const burgerMenu = document.querySelector('.burger__menu');
     const logo = document.querySelector('.header__logo');
     const nav = document.querySelector('.navigation');
-    nav.tabIndex = '1';
-    nav.focus();
-
+   
     burgerMenu.addEventListener('click', () => {
         burgerMenu.classList.toggle('burger__menu_transform');
         logo.classList.toggle('logo__mobile');
@@ -227,6 +224,7 @@ const addClickHideBurgerMenuHandler = () => {
     const burgerMenu = document.querySelector('.burger__menu');
     const logo = document.querySelector('.header__logo');
     const nav = document.querySelector('.navigation');
+    nav.tabIndex = '-1';
     
     nav.addEventListener('click', (e) => {
         if (nav.classList.contains('navigation__mobile') && e.target.classList.contains('navigation__link')) {
@@ -237,9 +235,10 @@ const addClickHideBurgerMenuHandler = () => {
     })
 
     nav.addEventListener('blur', () => {
-        burgerMenu.classList.toggle('burger__menu_transform');
-        logo.classList.toggle('logo__mobile');
-        nav.classList.toggle('navigation__mobile');
-        
+        if (nav.classList.contains('navigation__mobile')) {
+            burgerMenu.classList.toggle('burger__menu_transform');
+            logo.classList.toggle('logo__mobile');
+            nav.classList.toggle('navigation__mobile');
+        } 
     })
 }
