@@ -213,6 +213,8 @@ const addClickBurgerMenuHandler = () => {
     const burgerMenu = document.querySelector('.burger__menu');
     const logo = document.querySelector('.header__logo');
     const nav = document.querySelector('.navigation');
+    nav.tabIndex = '1';
+    nav.focus();
 
     burgerMenu.addEventListener('click', () => {
         burgerMenu.classList.toggle('burger__menu_transform');
@@ -225,12 +227,19 @@ const addClickHideBurgerMenuHandler = () => {
     const burgerMenu = document.querySelector('.burger__menu');
     const logo = document.querySelector('.header__logo');
     const nav = document.querySelector('.navigation');
-
+    
     nav.addEventListener('click', (e) => {
-        if (e.target.classList.contains('navigation__mobile')) {
+        if (nav.classList.contains('navigation__mobile') && e.target.classList.contains('navigation__link')) {
             burgerMenu.classList.toggle('burger__menu_transform');
             logo.classList.toggle('logo__mobile');
-            nav.classList.toggle('navigation__mobile');
+            nav.classList.toggle('navigation__mobile');  
         }
+    })
+
+    nav.addEventListener('blur', () => {
+        burgerMenu.classList.toggle('burger__menu_transform');
+        logo.classList.toggle('logo__mobile');
+        nav.classList.toggle('navigation__mobile');
+        
     })
 }
