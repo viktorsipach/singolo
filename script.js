@@ -55,19 +55,6 @@ const selectClickedLink = (link) => {
     link.classList.add('active_link');
 };
 
-const getScrollPosition = (link) => {
-    if (link.name === 'service') {
-        window.scrollTo(pageXOffset, 600);
-    } else if (link.name === 'portfolio') {
-        window.scrollTo(pageXOffset, 1130);
-    } else if (link.name === 'about') {
-        window.scrollTo(pageXOffset, 2050);
-    } else if (link.name === 'contact') {
-        window.scrollTo(pageXOffset, 3800);
-    } else {
-        window.scrollTo(pageXOffset, 0);
-    }
-}
 
 const addClickTagsHandler = () => {
     document.querySelector('.tags-container').addEventListener('click', (e) => {
@@ -116,37 +103,72 @@ const addClickBlackScreenHandler = () => {
 };
 
 const addClickSliderHandler = () => {
-    const firstSlide = document.querySelector('.slide-first__container');
-    const secondSlide = document.querySelector('.slide-second__container');
+    const firstSlide = document.querySelector('.slide-first');
+    const secondSlide = document.querySelector('.slide-second');
+    let isShowFirstSlide = true;
 
     document.querySelector('.slider__btn_left').addEventListener('click', () => {
-        if (firstSlide.classList.contains('slide_show')) { 
-            firstSlide.classList.add('slide_hidden');  
-            firstSlide.classList.remove('slide_show');  
-            secondSlide.classList.toggle('slide_show');
-            document.querySelector('.slider').style.background = '#648BF0';
-        } else if (secondSlide.classList.contains('slide_show')) {
-            secondSlide.classList.add('slide_hidden'); 
-            secondSlide.classList.remove('slide_show');  
-            firstSlide.classList.toggle('slide_show');
-            document.querySelector('.slider').style.background = '#f06c64';
-        } 
+        firstSlide.style.transition = 'all .5s ease';
+        secondSlide.style.transition = 'all .5s ease';
+            if (isShowFirstSlide) {
+                firstSlide.style.left = '-100%'
+                secondSlide.style.left = '0';
+                isShowFirstSlide = false;  
+            } else {
+                firstSlide.style.left = '100%';
+                secondSlide.style.left = '-100%';
+                firstSlide.style.left = '0';
+                isShowFirstSlide = true;
+            }
+        setTimeout(()=> {
+            changeSlidePositionToRight(isShowFirstSlide);
+        }, 500);
     })
 
     document.querySelector('.slider__btn_right').addEventListener('click', () => {
-        if (firstSlide.classList.contains('slide_show')) { 
-            firstSlide.classList.add('slide_hidden');  
-            firstSlide.classList.remove('slide_show');  
-            secondSlide.classList.toggle('slide_show');
-            document.querySelector('.slider').style.background = '#648BF0';
-        } else if (secondSlide.classList.contains('slide_show')) {
-            secondSlide.classList.add('slide_hidden'); 
-            secondSlide.classList.remove('slide_show');  
-            firstSlide.classList.toggle('slide_show');
-            document.querySelector('.slider').style.background = '#f06c64';
-        } 
+        firstSlide.style.transition = 'all .5s ease';
+        secondSlide.style.transition = 'all .5s ease';
+            if (isShowFirstSlide) {
+                firstSlide.style.left = '100%'
+                secondSlide.style.left = '0';
+                isShowFirstSlide = false;
+            } else {
+                firstSlide.style.left = '-100%';
+                secondSlide.style.left = '100%';
+                firstSlide.style.left = '0';
+                isShowFirstSlide = true;
+            }
+        setTimeout(() => {
+            changeSlidePositionToLeft(isShowFirstSlide);
+        }, 500);
     })
 };
+
+const changeSlidePositionToRight = (firstSlidePosition) => {
+    const firstSlide = document.querySelector('.slide-first');
+    const secondSlide = document.querySelector('.slide-second');
+
+    firstSlide.style.transition = 'none';
+    secondSlide.style.transition = 'none';
+
+    if (firstSlidePosition) {
+        secondSlide.style.left = '100%';
+    } else {
+        firstSlide.style.left = '100%';
+    }
+};
+
+const changeSlidePositionToLeft = (firstSlidePosition) => {
+    const firstSlide = document.querySelector('.slide-first');
+    const secondSlide = document.querySelector('.slide-second');
+    firstSlide.style.transition = 'none';
+    secondSlide.style.transition = 'none';
+    if (firstSlidePosition) {
+        secondSlide.style.left = '-100%';
+    } else {
+        firstSlide.style.left = '-100%';
+    }
+}
 
 const addClickImgHandler = () => {
     document.querySelector('.image-container').addEventListener('click', (e) => {
