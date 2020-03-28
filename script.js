@@ -8,7 +8,6 @@ window.onload = () => {
     addClickSubmitHandler();
     addClickModalCloseHandler(); 
     addClickBurgerMenuHandler();
-    addClickHideBurgerMenuHandler();
 };
 
 const addScrollMenuHandler = () => {
@@ -234,33 +233,18 @@ const addClickBurgerMenuHandler = () => {
     const burgerMenu = document.querySelector('.burger__menu');
     const logo = document.querySelector('.header__logo');
     const nav = document.querySelector('.navigation');
-   
+  
     burgerMenu.addEventListener('click', () => {
         burgerMenu.classList.toggle('burger__menu_transform');
         logo.classList.toggle('logo__mobile');
         nav.classList.toggle('navigation__mobile');
-    })
-}
+    });
 
-const addClickHideBurgerMenuHandler = () => {
-    const burgerMenu = document.querySelector('.burger__menu');
-    const logo = document.querySelector('.header__logo');
-    const nav = document.querySelector('.navigation');
-    nav.tabIndex = '-1';
-    
     nav.addEventListener('click', (e) => {
         if (nav.classList.contains('navigation__mobile') && e.target.classList.contains('navigation__link')) {
             burgerMenu.classList.toggle('burger__menu_transform');
             logo.classList.toggle('logo__mobile');
-            nav.classList.toggle('navigation__mobile');  
+            nav.classList.toggle('navigation__mobile');   
         }
-    })
-
-    nav.addEventListener('blur', () => {
-        if (nav.classList.contains('navigation__mobile')) {
-            burgerMenu.classList.toggle('burger__menu_transform');
-            logo.classList.toggle('logo__mobile');
-            nav.classList.toggle('navigation__mobile');
-        } 
-    })
+    });
 }
