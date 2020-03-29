@@ -2,6 +2,16 @@
 html {
     scroll-behavior: smooth;
     font-size: 10px;
+
+    @media (max-width: 1019px) {
+        overflow-x: hidden;
+    }
+}
+
+body {
+    @media (max-width: 1019px) {
+        overflow-x: hidden;
+    }
 }
 
 .wrapper {
